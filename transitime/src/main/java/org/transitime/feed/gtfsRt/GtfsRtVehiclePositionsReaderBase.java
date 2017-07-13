@@ -152,8 +152,7 @@ public abstract class GtfsRtVehiclePositionsReaderBase {
 		    // Handle speed and heading
 		    float speed = Float.NaN;
 		    if (position.hasSpeed()) {
-                //  TODO: remove hack for converting mph to m/s when capmetro fixes feed
-		    	speed = position.getSpeed() * 0.44704f;
+		    	speed = position.getSpeed();
 		    }
 		    float heading = Float.NaN;
 		    if (position.hasBearing()) {
